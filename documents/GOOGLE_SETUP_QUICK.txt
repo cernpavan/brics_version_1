@@ -1,0 +1,104 @@
+===============================================
+🔐 GOOGLE SIGN-IN SETUP - QUICK GUIDE
+===============================================
+
+Google OAuth Setup (Takes ~15 minutes)
+
+===============================================
+STEP 1: GOOGLE CLOUD CONSOLE (10 minutes)
+===============================================
+
+1. Go to Google Cloud Console:
+   https://console.cloud.google.com/
+
+2. Create new project: "BRICS Connect"
+
+3. Enable Google+ API:
+   https://console.cloud.google.com/apis/library
+
+4. Configure OAuth consent screen:
+   - APIs & Services → OAuth consent screen
+   - Choose "External"
+   - Fill in app name and email
+   - Add your email as test user
+
+5. Create OAuth 2.0 Credentials:
+   - APIs & Services → Credentials
+   - Create Credentials → OAuth client ID
+   - Type: Web application
+   
+6. Add JavaScript origins:
+   http://localhost:5173
+   https://zgiefiogqmlzqnefsqlj.supabase.co
+
+7. Add redirect URI (IMPORTANT!):
+   https://zgiefiogqmlzqnefsqlj.supabase.co/auth/v1/callback
+
+8. Save your credentials:
+   - Client ID (xxxxx.apps.googleusercontent.com)
+   - Client Secret (GOCSPX-xxxxx)
+
+===============================================
+STEP 2: SUPABASE CONFIGURATION (3 minutes)
+===============================================
+
+1. Go to Supabase Auth Providers:
+   https://supabase.com/dashboard/project/zgiefiogqmlzqnefsqlj/auth/providers
+
+2. Find "Google" provider
+
+3. Toggle it ON
+
+4. Paste:
+   - Client ID (from Step 1)
+   - Client Secret (from Step 1)
+
+5. Click "Save"
+
+===============================================
+STEP 3: TEST IT! (2 minutes)
+===============================================
+
+1. Restart dev server:
+   npm run dev
+
+2. Open: http://localhost:5173
+
+3. Click "Sign In" or "Get Started"
+
+4. Click "Continue with Google" button
+
+5. Sign in with your Google account
+
+6. Success! You should be logged in ✓
+
+===============================================
+TROUBLESHOOTING
+===============================================
+
+❌ "Access blocked" error
+   → Add your email to test users in OAuth consent screen
+
+❌ "Redirect URI mismatch"
+   → Check redirect URI is exactly:
+     https://zgiefiogqmlzqnefsqlj.supabase.co/auth/v1/callback
+
+❌ "Invalid client ID"
+   → Re-copy Client ID from Google Console
+   → Make sure it ends with .apps.googleusercontent.com
+
+❌ Button does nothing
+   → Add JavaScript origins in Google Console
+   → Clear browser cache
+
+===============================================
+FULL DETAILED GUIDE
+===============================================
+
+For complete step-by-step instructions with screenshots
+and detailed explanations, read:
+
+   📖 GOOGLE_OAUTH_SETUP.md
+
+===============================================
+
