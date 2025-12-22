@@ -511,6 +511,27 @@ export const AuthModal = ({ isOpen, onClose, initialMode = "signin" }: AuthModal
           </form>
         ) : mode === "signup" ? (
           <form onSubmit={handleSignUp} className="space-y-4 mt-4">
+            <Button
+              type="button"
+              variant="outline"
+              size="lg"
+              className="w-full"
+              onClick={handleGoogleAuth}
+              disabled={loading}
+            >
+              <Mail className="w-4 h-4 mr-2" />
+              Google
+            </Button>
+
+            <div className="relative my-4">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-border" />
+              </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-background px-2 text-muted-foreground">Or continue with email</span>
+              </div>
+            </div>
+
             <div className="space-y-2">
               <Label htmlFor="signup-fullname">Full Name *</Label>
               <Input
@@ -622,27 +643,6 @@ export const AuthModal = ({ isOpen, onClose, initialMode = "signin" }: AuthModal
             >
               {loading && <Loader2 className="w-4 h-4 animate-spin mr-2" />}
               Create Account
-            </Button>
-
-            <div className="relative my-4">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-border" />
-              </div>
-              <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-background px-2 text-muted-foreground">Or sign up with</span>
-              </div>
-            </div>
-
-            <Button
-              type="button"
-              variant="outline"
-              size="lg"
-              className="w-full"
-              onClick={handleGoogleAuth}
-              disabled={loading}
-            >
-              <Mail className="w-4 h-4 mr-2" />
-              Google
             </Button>
 
             <p className="text-center text-sm text-muted-foreground mt-4">
