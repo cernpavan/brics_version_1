@@ -55,6 +55,7 @@ export const Header = () => {
   };
 
   const isActive = (path: string) => location.pathname === path;
+  const isHomePage = location.pathname === "/";
 
   const navItems = [
     { path: "/", label: t("header.home") },
@@ -72,9 +73,13 @@ export const Header = () => {
       />
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      scrolled 
-        ? "bg-background/95 backdrop-blur-lg border-b border-border/50 shadow-lg" 
-        : "bg-background/70 backdrop-blur-md border-b border-transparent"
+      isHomePage
+        ? scrolled 
+          ? "bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-lg" 
+          : "bg-white/90 backdrop-blur-md border-b border-transparent"
+        : scrolled 
+          ? "bg-background/95 backdrop-blur-lg border-b border-border/50 shadow-lg" 
+          : "bg-background/70 backdrop-blur-md border-b border-transparent"
     )}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">

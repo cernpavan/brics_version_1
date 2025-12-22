@@ -92,7 +92,7 @@ const Index = () => {
         />
         
         {/* Gradient Overlay for Better Text Readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-navy/95 via-navy/85 to-navy/75" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/85 to-slate-900/80" />
         
         {/* Subtle Animated Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -141,7 +141,7 @@ const Index = () => {
               </Link>
             </div>
 
-            {/* Stats with Glass Morphism */}
+            {/* Stats - Simple Text */}
             <div className="grid grid-cols-3 gap-4 md:gap-8 mt-20 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               {[
                 { value: "9", label: t("home.stats.countries") },
@@ -150,11 +150,11 @@ const Index = () => {
               ].map((stat, i) => (
                 <div 
                   key={i} 
-                  className="text-center p-6 rounded-2xl glass-morphism hover:scale-105 transition-all duration-300"
+                  className="text-center"
                   style={{ animationDelay: `${0.5 + i * 0.1}s` }}
                 >
-                  <div className="text-3xl md:text-5xl font-bold text-gold mb-2">{stat.value}</div>
-                  <div className="text-xs md:text-sm text-white/80 font-medium">{stat.label}</div>
+                  <div className="text-4xl md:text-6xl font-bold text-gold mb-2">{stat.value}</div>
+                  <div className="text-sm md:text-base text-white/90 font-medium">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -298,7 +298,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-navy via-navy-light to-navy relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 right-10 w-64 h-64 bg-gold rounded-full blur-3xl" />
