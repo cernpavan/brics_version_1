@@ -1,0 +1,163 @@
+{
+  "header": {
+    "home": "Início",
+    "about": "Sobre Nós",
+    "products": "Produtos",
+    "blog": "Blog",
+    "postProduct": "Publicar Produto",
+    "dashboard": "Painel",
+    "signIn": "Entrar",
+    "getStarted": "Começar",
+    "logout": "Sair"
+  },
+  "home": {
+    "badge": "Conectando Economias BRICS",
+    "title": "Comércio entre",
+    "titleHighlight": "Nações BRICS",
+    "subtitle": "O principal marketplace B2B conectando exportadores e compradores no Brasil, Rússia, Índia, China e África do Sul.",
+    "ctaPrimary": "Começar",
+    "ctaSecondary": "Navegar Produtos",
+    "stats": {
+      "countries": "Países BRICS+",
+      "population": "População Combinada",
+      "gdp": "PIB Combinado",
+      "traders": "Comerciantes Ativos"
+    },
+    "features": {
+      "title": "Por que escolher BRICSZ?",
+      "subtitle": "Tudo que você precisa para negociar entre nações BRICS+",
+      "global": {
+        "title": "Alcance Global",
+        "description": "Conecte-se com empresas em todos os países BRICS+ a partir de uma plataforma."
+      },
+      "secure": {
+        "title": "Comércio Seguro",
+        "description": "Comerciantes verificados e transações seguras garantem tranquilidade."
+      },
+      "easy": {
+        "title": "Fácil de Usar",
+        "description": "Interface simples projetada para empresas de todos os tamanhos."
+      },
+      "support": {
+        "title": "Suporte 24/7",
+        "description": "Obtenha ajuda sempre que precisar com nossa equipe de suporte dedicada."
+      }
+    },
+    "testimonials": {
+      "title": "Confiado por",
+      "titleHighlight": "Comerciantes Globais",
+      "subtitle": "Veja o que nossa comunidade está dizendo sobre sua experiência com BRICSZ"
+    },
+    "cta": {
+      "title": "Pronto para expandir seu negócio?",
+      "subtitle": "Junte-se a milhares de comerciantes que já estão comprando e vendendo na",
+      "brand": "BRICSZ",
+      "joinNow": "Junte-se Agora",
+      "signIn": "Entrar"
+    }
+  },
+  "about": {
+    "badge": "Sobre BRICSZ",
+    "title": "Conectando as",
+    "titleHighlight": "Economias de Crescimento Mais Rápido do Mundo",
+    "subtitle": "BRICSZ é o principal marketplace B2B construído especificamente para comércio entre nações BRICS+, capacitando empresas a se expandirem globalmente com confiança.",
+    "stats": {
+      "countries": "Países BRICS+",
+      "population": "População Combinada",
+      "gdp": "PIB Combinado",
+      "traders": "Comerciantes Ativos"
+    },
+    "mission": {
+      "title": "Nossa Missão",
+      "description1": "Revolucionar o comércio internacional dentro da aliança BRICS+ fornecendo uma plataforma segura, eficiente e fácil de usar que conecta exportadores e importadores através das fronteiras.",
+      "description2": "Acreditamos no poder dos mercados emergentes e estamos comprometidos em facilitar a cooperação econômica que beneficia empresas de todos os tamanhos.",
+      "cta": "Explorar Produtos"
+    },
+    "values": {
+      "title": "Nossos",
+      "titleHighlight": "Valores Fundamentais",
+      "subtitle": "Os princípios que orientam tudo que fazemos na BRICSZ",
+      "trust": {
+        "title": "Confiança e Segurança",
+        "description": "Verificamos cada comerciante e garantimos transações seguras em todas as nações BRICS."
+      },
+      "connectivity": {
+        "title": "Conectividade Global",
+        "description": "Conectando mercados no Brasil, Rússia, Índia, China, África do Sul e além."
+      },
+      "efficiency": {
+        "title": "Rápido e Eficiente",
+        "description": "Conexões diretas entre compradores e vendedores, eliminando intermediários desnecessários."
+      },
+      "focus": {
+        "title": "Marketplace Focado",
+        "description": "Plataforma especializada projetada especificamente para cooperação econômica BRICS+."
+      }
+    },
+    "philosophy": {
+      "title": "O que nos motiva",
+      "subtitle": "Nossa filosofia e compromisso com a excelência",
+      "innovation": {
+        "name": "Inovação",
+        "role": "Nossa Visão",
+        "description": "Construindo o futuro do comércio BRICS através de tecnologia e inovação."
+      },
+      "collaboration": {
+        "name": "Colaboração",
+        "role": "Nossa Missão",
+        "description": "Promovendo parcerias e crescimento econômico em mercados emergentes."
+      },
+      "excellence": {
+        "name": "Excelência",
+        "role": "Nosso Compromisso",
+        "description": "Oferecendo experiência de marketplace B2B de classe mundial para todos os nossos usuários."
+      }
+    },
+    "cta": {
+      "title": "Pronto para se juntar à BRICSZ?",
+      "subtitle": "Comece a negociar com confiança nas economias mais dinâmicas do mundo.",
+      "getStarted": "Começar Agora",
+      "browseProducts": "Navegar Produtos"
+    }
+  },
+  "blog": {
+    "badge": "Insights BRICSZ",
+    "title": "Insights de Comércio e",
+    "titleHighlight": "Notícias da Indústria",
+    "subtitle": "Mantenha-se atualizado com as últimas tendências, dicas e histórias de sucesso no comércio internacional BRICS+.",
+    "featured": "Destaque",
+    "readMore": "Ler Mais",
+    "readTime": "min de leitura",
+    "categories": {
+      "all": "Todos os Posts",
+      "trade": "Insights de Comércio",
+      "export": "Guia de Exportação",
+      "finance": "Finanças",
+      "tech": "Tecnologia",
+      "stories": "Histórias de Sucesso",
+      "sustainability": "Sustentabilidade"
+    },
+    "newsletter": {
+      "title": "Mantenha-se Informado",
+      "subtitle": "Receba os últimos insights de comércio, notícias da indústria e dicas exclusivas na sua caixa de entrada.",
+      "placeholder": "Digite seu email",
+      "subscribe": "Inscrever-se"
+    }
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "success": "Sucesso",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "search": "Pesquisar",
+    "filter": "Filtrar",
+    "close": "Fechar"
+  }
+}
+

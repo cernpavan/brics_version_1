@@ -1,0 +1,163 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "blog": "Blog",
+    "postProduct": "Post Product",
+    "dashboard": "Dashboard",
+    "signIn": "Sign In",
+    "getStarted": "Get Started",
+    "logout": "Logout"
+  },
+  "home": {
+    "badge": "Connecting BRICS Economies",
+    "title": "Trade Across",
+    "titleHighlight": "BRICS Nations",
+    "subtitle": "The premier B2B marketplace connecting exporters and buyers across Brazil, Russia, India, China, and South Africa.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "Browse Products",
+    "stats": {
+      "countries": "BRICS+ Countries",
+      "population": "Combined Population",
+      "gdp": "Combined GDP",
+      "traders": "Active Traders"
+    },
+    "features": {
+      "title": "Why Choose BRICSZ?",
+      "subtitle": "Everything you need to trade across BRICS+ nations",
+      "global": {
+        "title": "Global Reach",
+        "description": "Connect with businesses across all BRICS+ countries from one platform."
+      },
+      "secure": {
+        "title": "Secure Trading",
+        "description": "Verified traders and secure transactions ensure peace of mind."
+      },
+      "easy": {
+        "title": "Easy to Use",
+        "description": "Simple interface designed for businesses of all sizes."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Get help whenever you need it with our dedicated support team."
+      }
+    },
+    "testimonials": {
+      "title": "Trusted by",
+      "titleHighlight": "Global Traders",
+      "subtitle": "See what our community is saying about their experience with BRICSZ"
+    },
+    "cta": {
+      "title": "Ready to Expand Your Business?",
+      "subtitle": "Join thousands of traders already buying and selling on",
+      "brand": "BRICSZ",
+      "joinNow": "Join Now",
+      "signIn": "Sign In"
+    }
+  },
+  "about": {
+    "badge": "About BRICSZ",
+    "title": "Connecting the World's",
+    "titleHighlight": "Fastest-Growing Economies",
+    "subtitle": "BRICSZ is the premier B2B marketplace built specifically for trade between BRICS+ nations, empowering businesses to expand globally with confidence.",
+    "stats": {
+      "countries": "BRICS+ Countries",
+      "population": "Combined Population",
+      "gdp": "Combined GDP",
+      "traders": "Active Traders"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description1": "To revolutionize international trade within the BRICS+ alliance by providing a secure, efficient, and user-friendly platform that connects exporters and importers across borders.",
+      "description2": "We believe in the power of emerging markets and are committed to facilitating economic cooperation that benefits businesses of all sizes.",
+      "cta": "Explore Products"
+    },
+    "values": {
+      "title": "Our",
+      "titleHighlight": "Core Values",
+      "subtitle": "The principles that drive everything we do at BRICSZ",
+      "trust": {
+        "title": "Trust & Security",
+        "description": "We verify every trader and ensure secure transactions across all BRICS nations."
+      },
+      "connectivity": {
+        "title": "Global Connectivity",
+        "description": "Bridging markets across Brazil, Russia, India, China, South Africa, and beyond."
+      },
+      "efficiency": {
+        "title": "Fast & Efficient",
+        "description": "Direct connections between buyers and sellers, cutting out unnecessary intermediaries."
+      },
+      "focus": {
+        "title": "Focused Marketplace",
+        "description": "Specialized platform designed specifically for BRICS+ economic cooperation."
+      }
+    },
+    "philosophy": {
+      "title": "What Drives Us",
+      "subtitle": "Our philosophy and commitment to excellence",
+      "innovation": {
+        "name": "Innovation",
+        "role": "Our Vision",
+        "description": "Building the future of BRICS trade through technology and innovation."
+      },
+      "collaboration": {
+        "name": "Collaboration",
+        "role": "Our Mission",
+        "description": "Fostering partnerships and economic growth across emerging markets."
+      },
+      "excellence": {
+        "name": "Excellence",
+        "role": "Our Commitment",
+        "description": "Delivering world-class B2B marketplace experience to all our users."
+      }
+    },
+    "cta": {
+      "title": "Ready to Join BRICSZ?",
+      "subtitle": "Start trading with confidence across the world's most dynamic economies.",
+      "getStarted": "Get Started Now",
+      "browseProducts": "Browse Products"
+    }
+  },
+  "blog": {
+    "badge": "BRICSZ Insights",
+    "title": "Trade Insights &",
+    "titleHighlight": "Industry News",
+    "subtitle": "Stay updated with the latest trends, tips, and success stories in BRICS+ international trade.",
+    "featured": "Featured",
+    "readMore": "Read More",
+    "readTime": "min read",
+    "categories": {
+      "all": "All Posts",
+      "trade": "Trade Insights",
+      "export": "Export Guide",
+      "finance": "Finance",
+      "tech": "Technology",
+      "stories": "Success Stories",
+      "sustainability": "Sustainability"
+    },
+    "newsletter": {
+      "title": "Stay Informed",
+      "subtitle": "Get the latest trade insights, industry news, and exclusive tips delivered to your inbox.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "close": "Close"
+  }
+}
+

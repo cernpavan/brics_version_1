@@ -6,8 +6,10 @@ import { Link } from "react-router-dom";
 import { AuthModal } from "@/components/AuthModal";
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { useTranslation } from "react-i18next";
 
 const Index = () => {
+  const { t } = useTranslation();
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [authMode, setAuthMode] = useState<"signin" | "signup" | "google-details">("signup");
 
@@ -103,18 +105,18 @@ const Index = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-morphism text-white mb-8 animate-scale-in hover:scale-105 transition-transform duration-300">
               <Globe className="w-4 h-4 text-gold" />
-              <span className="text-sm font-semibold tracking-wide">Connecting BRICS Economies</span>
+              <span className="text-sm font-semibold tracking-wide">{t("home.badge")}</span>
             </div>
 
             {/* Main Heading */}
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 animate-fade-in leading-tight" style={{ animationDelay: '0.1s' }}>
-              Trade Across
-              <span className="block text-gradient-gold mt-2">BRICS Nations</span>
+              {t("home.title")}
+              <span className="block text-gradient-gold mt-2">{t("home.titleHighlight")}</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10 animate-fade-in leading-relaxed" style={{ animationDelay: '0.2s' }}>
-              The premier B2B marketplace connecting exporters and buyers across Brazil, Russia, India, China, and South Africa.
+              {t("home.subtitle")}
             </p>
 
             {/* CTA Buttons */}
@@ -125,7 +127,7 @@ const Index = () => {
                 className="w-full sm:w-auto hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-glow-gold" 
                 onClick={() => openSignUpModal("signup")}
               >
-                Start Trading
+                {t("home.ctaPrimary")}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Link to="/products" className="w-full sm:w-auto">
@@ -134,7 +136,7 @@ const Index = () => {
                   size="xl" 
                   className="w-full hover:scale-105 transition-transform duration-300"
                 >
-                  Browse Products
+                  {t("home.ctaSecondary")}
                 </Button>
               </Link>
             </div>
@@ -142,9 +144,9 @@ const Index = () => {
             {/* Stats with Glass Morphism */}
             <div className="grid grid-cols-3 gap-4 md:gap-8 mt-20 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               {[
-                { value: "9", label: "BRICS+ Countries" },
-                { value: "1000+", label: "Products" },
-                { value: "500+", label: "Traders" },
+                { value: "9", label: t("home.stats.countries") },
+                { value: "3.2B+", label: t("home.stats.population") },
+                { value: "500+", label: t("home.stats.traders") },
               ].map((stat, i) => (
                 <div 
                   key={i} 
@@ -165,32 +167,38 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Why Choose <span className="text-gradient-gold">BRICSZ</span>?
+              {t("home.features.title")}
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Simplifying international trade between the world's fastest-growing economies.
+              {t("home.features.subtitle")}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: Shield,
-                title: "Verified Traders",
-                description: "All users go through our verification process to ensure quality and reliability.",
+                icon: Globe,
+                title: t("home.features.global.title"),
+                description: t("home.features.global.description"),
                 delay: "0s",
               },
               {
-                icon: Zap,
-                title: "Direct Connection",
-                description: "Connect directly with other traders without intermediaries. Save time and costs.",
+                icon: Shield,
+                title: t("home.features.secure.title"),
+                description: t("home.features.secure.description"),
                 delay: "0.1s",
               },
               {
-                icon: Users,
-                title: "BRICS Focus",
-                description: "Specialized marketplace for the BRICS economic bloc with tailored features.",
+                icon: Zap,
+                title: t("home.features.easy.title"),
+                description: t("home.features.easy.description"),
                 delay: "0.2s",
+              },
+              {
+                icon: Users,
+                title: t("home.features.support.title"),
+                description: t("home.features.support.description"),
+                delay: "0.3s",
               },
             ].map((feature, i) => (
               <div
@@ -218,10 +226,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Trusted by <span className="text-gradient-gold">Global Traders</span>
+              {t("home.testimonials.title")} <span className="text-gradient-gold">{t("home.testimonials.titleHighlight")}</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              See what our community is saying about their experience with BRICSZ
+              {t("home.testimonials.subtitle")}
             </p>
           </div>
 
@@ -300,10 +308,10 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Expand Your Business?
+              {t("home.cta.title")}
             </h2>
             <p className="text-white/80 text-lg mb-10 leading-relaxed">
-              Join thousands of traders already buying and selling on <span className="text-gold font-semibold">BRICSZ</span>.
+              {t("home.cta.subtitle")} <span className="text-gold font-semibold">{t("home.cta.brand")}</span>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -312,7 +320,7 @@ const Index = () => {
                 className="hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-glow-gold"
                 onClick={() => openSignUpModal("signup")}
               >
-                Join Now
+                {t("home.cta.joinNow")}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button 
@@ -321,7 +329,7 @@ const Index = () => {
                 className="border-white/30 text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
                 onClick={() => openSignUpModal("signin")}
               >
-                Sign In
+                {t("home.cta.signIn")}
               </Button>
             </div>
           </div>

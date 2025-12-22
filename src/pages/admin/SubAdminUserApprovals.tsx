@@ -108,7 +108,7 @@ const SubAdminUserApprovals = () => {
 
   const handleApprove = async (userId: string) => {
     try {
-      const { data, error } = await supabase
+      let { data, error } = await supabase
         .from("profiles")
         .update({ approval_status: "approved" })
         .eq("user_id", userId)

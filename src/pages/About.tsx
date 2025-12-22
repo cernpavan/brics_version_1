@@ -3,55 +3,17 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Globe, Target, Users, Award, TrendingUp, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   const stats = [
-    { value: "9", label: "BRICS+ Countries", icon: Globe },
-    { value: "3.2B+", label: "Combined Population", icon: Users },
-    { value: "$28T+", label: "Combined GDP", icon: TrendingUp },
-    { value: "1000+", label: "Active Traders", icon: Award },
+    { value: "9", label: t("about.stats.countries"), icon: Globe },
+    { value: "3.2B+", label: t("about.stats.population"), icon: Users },
+    { value: "$28T+", label: t("about.stats.gdp"), icon: TrendingUp },
+    { value: "1000+", label: t("about.stats.traders"), icon: Award },
   ];
 
-  const values = [
-    {
-      icon: Shield,
-      title: "Trust & Security",
-      description: "We verify every trader and ensure secure transactions across all BRICS nations.",
-    },
-    {
-      icon: Globe,
-      title: "Global Connectivity",
-      description: "Bridging markets across Brazil, Russia, India, China, South Africa, and beyond.",
-    },
-    {
-      icon: Zap,
-      title: "Fast & Efficient",
-      description: "Direct connections between buyers and sellers, cutting out unnecessary intermediaries.",
-    },
-    {
-      icon: Target,
-      title: "Focused Marketplace",
-      description: "Specialized platform designed specifically for BRICS+ economic cooperation.",
-    },
-  ];
-
-  const team = [
-    {
-      name: "Innovation",
-      role: "Our Vision",
-      description: "Building the future of BRICS trade through technology and innovation.",
-    },
-    {
-      name: "Collaboration",
-      role: "Our Mission",
-      description: "Fostering partnerships and economic growth across emerging markets.",
-    },
-    {
-      name: "Excellence",
-      role: "Our Commitment",
-      description: "Delivering world-class B2B marketplace experience to all our users.",
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -64,14 +26,14 @@ const About = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold/10 border border-gold/20 text-gold mb-6 animate-scale-in">
               <Globe className="w-4 h-4" />
-              <span className="text-sm font-semibold">About BRICSZ</span>
+              <span className="text-sm font-semibold">{t("about.badge")}</span>
             </div>
             <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Connecting the World's
-              <span className="block text-gradient-gold mt-2">Fastest-Growing Economies</span>
+              {t("about.title")}
+              <span className="block text-gradient-gold mt-2">{t("about.titleHighlight")}</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in leading-relaxed" style={{ animationDelay: '0.2s' }}>
-              BRICSZ is the premier B2B marketplace built specifically for trade between BRICS+ nations, empowering businesses to expand globally with confidence.
+              {t("about.subtitle")}
             </p>
           </div>
         </div>
@@ -103,17 +65,17 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div className="animate-slide-in-left">
                 <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-                  Our Mission
+                  {t("about.mission.title")}
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  To revolutionize international trade within the BRICS+ alliance by providing a secure, efficient, and user-friendly platform that connects exporters and importers across borders.
+                  {t("about.mission.description1")}
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  We believe in the power of emerging markets and are committed to facilitating economic cooperation that benefits businesses of all sizes.
+                  {t("about.mission.description2")}
                 </p>
                 <Link to="/products">
                   <Button variant="gold" size="lg" className="hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-glow-gold">
-                    Explore Products
+                    {t("about.mission.cta")}
                   </Button>
                 </Link>
               </div>
@@ -134,15 +96,36 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Our <span className="text-gradient-gold">Core Values</span>
+              {t("about.values.title")} <span className="text-gradient-gold">{t("about.values.titleHighlight")}</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              The principles that drive everything we do at BRICSZ
+              {t("about.values.subtitle")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, i) => (
+            {[
+              {
+                icon: Shield,
+                title: t("about.values.trust.title"),
+                description: t("about.values.trust.description"),
+              },
+              {
+                icon: Globe,
+                title: t("about.values.connectivity.title"),
+                description: t("about.values.connectivity.description"),
+              },
+              {
+                icon: Zap,
+                title: t("about.values.efficiency.title"),
+                description: t("about.values.efficiency.description"),
+              },
+              {
+                icon: Target,
+                title: t("about.values.focus.title"),
+                description: t("about.values.focus.description"),
+              },
+            ].map((value, i) => (
               <div
                 key={i}
                 className="p-8 bg-card rounded-2xl border border-border hover:border-gold/50 transition-all duration-300 hover-lift animate-slide-up"
@@ -168,15 +151,31 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-              What Drives Us
+              {t("about.philosophy.title")}
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Our philosophy and commitment to excellence
+              {t("about.philosophy.subtitle")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {team.map((member, i) => (
+            {[
+              {
+                name: t("about.philosophy.innovation.name"),
+                role: t("about.philosophy.innovation.role"),
+                description: t("about.philosophy.innovation.description"),
+              },
+              {
+                name: t("about.philosophy.collaboration.name"),
+                role: t("about.philosophy.collaboration.role"),
+                description: t("about.philosophy.collaboration.description"),
+              },
+              {
+                name: t("about.philosophy.excellence.name"),
+                role: t("about.philosophy.excellence.role"),
+                description: t("about.philosophy.excellence.description"),
+              },
+            ].map((member, i) => (
               <div
                 key={i}
                 className="p-8 bg-gradient-to-br from-card to-muted/30 rounded-2xl border border-border hover:border-gold/50 transition-all duration-300 hover-lift text-center animate-scale-in"
@@ -207,10 +206,10 @@ const About = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Join BRICSZ?
+              {t("about.cta.title")}
             </h2>
             <p className="text-white/80 text-lg mb-10 leading-relaxed">
-              Start trading with confidence across the world's most dynamic economies.
+              {t("about.cta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/">
@@ -219,7 +218,7 @@ const About = () => {
                   size="lg"
                   className="hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-glow-gold"
                 >
-                  Get Started Now
+                  {t("about.cta.getStarted")}
                 </Button>
               </Link>
               <Link to="/products">
@@ -228,7 +227,7 @@ const About = () => {
                   size="lg"
                   className="border-white/30 text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
                 >
-                  Browse Products
+                  {t("about.cta.browseProducts")}
                 </Button>
               </Link>
             </div>

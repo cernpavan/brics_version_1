@@ -5,9 +5,12 @@ import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { User as SupabaseUser } from "@supabase/supabase-js";
 import { AuthModal } from "@/components/AuthModal";
+import { LanguageSelector } from "@/components/LanguageSelector";
+import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 
 export const Header = () => {
+  const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [user, setUser] = useState<SupabaseUser | null>(null);
   const [authModalOpen, setAuthModalOpen] = useState(false);
@@ -54,10 +57,10 @@ export const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About Us" },
-    { path: "/products", label: "Products" },
-    { path: "/blog", label: "Blog" },
+    { path: "/", label: t("header.home") },
+    { path: "/about", label: t("header.about") },
+    { path: "/products", label: t("header.products") },
+    { path: "/blog", label: t("header.blog") },
   ];
 
   return (
@@ -104,46 +107,47 @@ export const Header = () => {
                 )}
               </Link>
             ))}
-            {user && (
-              <Link
-                to="/post-product"
-                className={cn(
-                  "relative text-sm font-medium transition-colors duration-300 py-2",
-                  isActive("/post-product")
-                    ? "text-gold"
-                    : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                Post Product
-                {isActive("/post-product") && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gold animate-slide-in-left" />
-                )}
-              </Link>
-            )}
+              {user && (
+                <Link
+                  to="/post-product"
+                  className={cn(
+                    "relative text-sm font-medium transition-colors duration-300 py-2",
+                    isActive("/post-product")
+                      ? "text-gold"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  {t("header.postProduct")}
+                  {isActive("/post-product") && (
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gold animate-slide-in-left" />
+                  )}
+                </Link>
+              )}
           </nav>
 
           {/* Desktop Auth */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
+            <LanguageSelector />
             {user ? (
               <>
                 <Link to="/dashboard">
                   <Button variant="ghost" size="sm" className="hover:bg-gold/10 hover:text-gold transition-all duration-300">
                     <User className="w-4 h-4 mr-2" />
-                    Dashboard
+                    {t("header.dashboard")}
                   </Button>
                 </Link>
                 <Button variant="outline" size="sm" onClick={handleLogout} className="hover:border-gold hover:text-gold transition-all duration-300">
                   <LogOut className="w-4 h-4 mr-2" />
-                  Logout
+                  {t("header.logout")}
                 </Button>
               </>
             ) : (
               <>
                 <Button variant="ghost" size="sm" onClick={openSignInModal} className="hover:bg-gold/10 hover:text-gold transition-all duration-300">
-                  Sign In
+                  {t("header.signIn")}
                 </Button>
                 <Button variant="gold" size="sm" onClick={openSignUpModal} className="hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-glow-gold">
-                  Get Started
+                  {t("header.getStarted")}
                 </Button>
               </>
             )}
@@ -192,26 +196,29 @@ export const Header = () => {
                 </Link>
               )}
               <div className="flex flex-col gap-3 px-4 pt-4 mt-4 border-t border-border">
+                <div className="px-4">
+                  <LanguageSelector />
+                </div>
                 {user ? (
                   <>
                     <Link to="/dashboard" onClick={() => setMobileMenuOpen(false)}>
                       <Button variant="outline" className="w-full">
                         <User className="w-4 h-4 mr-2" />
-                        Dashboard
+                        {t("header.dashboard")}
                       </Button>
                     </Link>
                     <Button variant="ghost" className="w-full" onClick={handleLogout}>
                       <LogOut className="w-4 h-4 mr-2" />
-                      Logout
+                      {t("header.logout")}
                     </Button>
                   </>
                 ) : (
                   <>
                     <Button variant="outline" className="w-full" onClick={openSignInModal}>
-                      Sign In
+                      {t("header.signIn")}
                     </Button>
                     <Button variant="gold" className="w-full" onClick={openSignUpModal}>
-                      Get Started
+                      {t("header.getStarted")}
                     </Button>
                   </>
                 )}

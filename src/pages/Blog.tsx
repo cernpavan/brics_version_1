@@ -3,8 +3,10 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowRight, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Blog = () => {
+  const { t } = useTranslation();
   const featuredPost = {
     id: 1,
     title: "The Future of BRICS+ Trade: Opportunities in 2025",
@@ -80,13 +82,13 @@ const Blog = () => {
   ];
 
   const categories = [
-    "All Posts",
-    "Trade Insights",
-    "Export Guide",
-    "Finance",
-    "Technology",
-    "Success Stories",
-    "Sustainability",
+    t("blog.categories.all"),
+    t("blog.categories.trade"),
+    t("blog.categories.export"),
+    t("blog.categories.finance"),
+    t("blog.categories.tech"),
+    t("blog.categories.stories"),
+    t("blog.categories.sustainability"),
   ];
 
   return (
@@ -100,14 +102,14 @@ const Blog = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold/10 border border-gold/20 text-gold mb-6 animate-scale-in">
               <TrendingUp className="w-4 h-4" />
-              <span className="text-sm font-semibold">BRICSZ Insights</span>
+              <span className="text-sm font-semibold">{t("blog.badge")}</span>
             </div>
             <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Trade Insights &
-              <span className="block text-gradient-gold mt-2">Industry News</span>
+              {t("blog.title")}
+              <span className="block text-gradient-gold mt-2">{t("blog.titleHighlight")}</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in leading-relaxed" style={{ animationDelay: '0.2s' }}>
-              Stay updated with the latest trends, tips, and success stories in BRICS+ international trade.
+              {t("blog.subtitle")}
             </p>
           </div>
         </div>
@@ -127,7 +129,7 @@ const Blog = () => {
                   />
                   <div className="absolute top-4 left-4">
                     <span className="px-4 py-2 bg-gold text-navy text-xs font-bold rounded-full">
-                      Featured
+                      {t("blog.featured")}
                     </span>
                   </div>
                 </div>
@@ -153,7 +155,7 @@ const Blog = () => {
                       {featuredPost.readTime}
                     </div>
                     <div className="flex items-center gap-2 text-gold font-semibold group-hover:gap-4 transition-all duration-300">
-                      Read More
+                      {t("blog.readMore")}
                       <ArrowRight className="w-5 h-5" />
                     </div>
                   </div>
@@ -251,15 +253,15 @@ const Blog = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">
-              Stay Informed
+              {t("blog.newsletter.title")}
             </h2>
             <p className="text-white/80 text-lg mb-10 leading-relaxed">
-              Get the latest trade insights, industry news, and exclusive tips delivered to your inbox.
+              {t("blog.newsletter.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder={t("blog.newsletter.placeholder")}
                 className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-gold transition-colors"
               />
               <Button
@@ -267,7 +269,7 @@ const Blog = () => {
                 size="lg"
                 className="hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-glow-gold"
               >
-                Subscribe
+                {t("blog.newsletter.subscribe")}
               </Button>
             </div>
           </div>
