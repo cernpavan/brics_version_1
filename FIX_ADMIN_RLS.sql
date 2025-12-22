@@ -34,3 +34,7 @@ WHERE tablename IN ('admin_users', 'sub_admin_users');
 
 -- Should show 2 policies with cmd = 'SELECT'
 
+
+
+
+

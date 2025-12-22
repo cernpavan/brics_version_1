@@ -433,7 +433,7 @@ export const AuthModal = ({ isOpen, onClose, initialMode = "signin" }: AuthModal
           </DialogTitle>
           <DialogDescription>
             {mode === "signin" && "Sign in to access your account"}
-            {mode === "signup" && "Join the BRICS trade network"}
+            {mode === "signup" && "Join the BRICSZ network"}
             {mode === "google-details" && "Please provide additional details to complete your registration"}
           </DialogDescription>
         </DialogHeader>

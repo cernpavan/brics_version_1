@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { ProductCard } from "@/components/ProductCard";
 import { SearchFilters } from "@/components/SearchFilters";
 import { supabase } from "@/integrations/supabase/client";
@@ -164,6 +165,7 @@ const Products = () => {
           </div>
         )}
       </main>
+      <Footer />
     </div>
   );
 };

@@ -30,3 +30,7 @@ VITE_SUPABASE_PUBLISHABLE_KEY=your-anon-key-here
 - Never commit `.env.local` to Git (it's in .gitignore)
 - Always use the `anon` key, never the `service_role` key in frontend
 
+
+
+
+

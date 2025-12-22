@@ -93,7 +93,7 @@ export const AdminSidebar = ({ onLogout }: AdminSidebarProps) => {
               </div>
               <div>
                 <h1 className="text-lg font-bold text-white">Admin Panel</h1>
-                <p className="text-xs text-slate-400">BRICS Trade</p>
+                <p className="text-xs text-slate-400">BRICSZ</p>
               </div>
             </div>
           </div>

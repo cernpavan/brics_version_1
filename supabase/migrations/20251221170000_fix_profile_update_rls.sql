@@ -92,3 +92,7 @@ GRANT EXECUTE ON FUNCTION public.upsert_user_profile(UUID, TEXT, TEXT, TEXT, TEX
 --
 -- ========================================
 
+
+
+
+

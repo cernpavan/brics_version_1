@@ -115,7 +115,7 @@ const Auth = () => {
           <div className="flex items-center gap-2 mb-8">
             <Globe className="w-8 h-8 text-gold" />
             <span className="font-serif text-2xl font-semibold">
-              BRICS<span className="text-gold">Trade</span>
+              BRICS<span className="text-gold">Z</span>
             </span>
           </div>
 
@@ -125,7 +125,7 @@ const Auth = () => {
           <p className="text-muted-foreground mb-8">
             {isLogin
               ? "Sign in to access your account"
-              : "Join the BRICS trade network"}
+              : "Join the BRICSZ network"}
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-5">

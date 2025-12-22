@@ -74,3 +74,7 @@ CREATE POLICY "Approved users can insert products"
 
 
 
+
+
+
+

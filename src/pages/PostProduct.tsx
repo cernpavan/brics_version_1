@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -472,6 +473,7 @@ const PostProduct = () => {
             <p className="text-muted-foreground">Verifying access...</p>
           </div>
         </main>
+        <Footer />
       </div>
     );
   }
@@ -501,6 +503,7 @@ const PostProduct = () => {
             </div>
           </div>
         </main>
+        <Footer />
       </div>
     );
   }
@@ -1026,6 +1029,7 @@ const PostProduct = () => {
           </DialogFooter>
         </DialogContent>
       </Dialog>
+      <Footer />
     </div>
   );
 };

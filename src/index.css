@@ -1,12 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&display=swap');
-
 @layer base {
   :root {
-    --background: 210 20% 98%;
+    --background: 220 20% 98%;
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
@@ -21,7 +21,7 @@
     --secondary: 45 90% 55%;
     --secondary-foreground: 222 47% 11%;
 
-    --muted: 210 20% 94%;
+    --muted: 220 15% 95%;
     --muted-foreground: 215 16% 47%;
 
     --accent: 45 85% 50%;
@@ -30,30 +30,37 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222 60% 20%;
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 45 90% 55%;
 
     --radius: 0.75rem;
 
-    /* Custom BRICS palette */
-    --gold: 45 90% 55%;
-    --gold-light: 45 85% 75%;
+    /* Enhanced BRICS palette - More vibrant and modern */
+    --gold: 43 96% 56%;
+    --gold-light: 45 95% 70%;
+    --gold-dark: 38 92% 50%;
     --navy: 222 60% 20%;
     --navy-light: 222 40% 35%;
-    --emerald: 160 60% 40%;
-    --crimson: 0 70% 50%;
+    --navy-dark: 222 70% 15%;
+    --emerald: 160 84% 39%;
+    --crimson: 0 72% 51%;
+    --azure: 210 100% 56%;
 
-    /* Gradients */
+    /* Modern Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(222 60% 15%) 0%, hsl(222 50% 25%) 50%, hsl(210 40% 30%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(45 90% 55%) 0%, hsl(40 85% 50%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43 96% 56%) 0%, hsl(38 92% 50%) 100%);
+    --gradient-gold-radial: radial-gradient(circle, hsl(43 96% 56%) 0%, hsl(38 92% 50%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 20% 98%) 100%);
+    --gradient-shine: linear-gradient(110deg, transparent 30%, hsl(43 96% 56% / 0.3) 50%, transparent 70%);
 
-    /* Shadows */
+    /* Enhanced Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(222 60% 20% / 0.05);
     --shadow-md: 0 4px 6px -1px hsl(222 60% 20% / 0.1), 0 2px 4px -2px hsl(222 60% 20% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(222 60% 20% / 0.1), 0 4px 6px -4px hsl(222 60% 20% / 0.1);
-    --shadow-glow: 0 0 30px hsl(45 90% 55% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(222 60% 20% / 0.15), 0 4px 6px -4px hsl(222 60% 20% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(222 60% 20% / 0.2), 0 10px 10px -5px hsl(222 60% 20% / 0.1);
+    --shadow-glow: 0 0 30px hsl(43 96% 56% / 0.4);
+    --shadow-glow-lg: 0 0 60px hsl(43 96% 56% / 0.3);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -163,6 +170,179 @@
   }
 
   @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Advanced Parallax Effect */
+  .parallax-slow {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Shimmer Effect */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-shine);
+    animation: shimmer 3s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  /* Pulse Glow Animation */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 20px hsl(43 96% 56% / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(43 96% 56% / 0.6); }
+  }
+
+  /* Bounce In Animation */
+  .animate-bounce-in {
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  @keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.3); }
+    50% { opacity: 1; transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+  }
+
+  /* Gradient Animation */
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Rotate In Animation */
+  .animate-rotate-in {
+    animation: rotateIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+
+  @keyframes rotateIn {
+    from { opacity: 0; transform: rotate(-10deg) scale(0.9); }
+    to { opacity: 1; transform: rotate(0) scale(1); }
+  }
+
+  /* Smooth Blur In */
+  .animate-blur-in {
+    animation: blurIn 0.8s ease-out forwards;
+  }
+
+  @keyframes blurIn {
+    from { opacity: 0; filter: blur(10px); }
+    to { opacity: 1; filter: blur(0); }
+  }
+
+  /* Elastic Scale */
+  .hover-elastic {
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .hover-elastic:hover {
+    transform: scale(1.08);
+  }
+
+  /* Smooth Underline Effect */
+  .underline-animated {
+    position: relative;
+  }
+
+  .underline-animated::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: hsl(43 96% 56%);
+    transition: width 0.3s ease;
+  }
+
+  .underline-animated:hover::after {
+    width: 100%;
+  }
+
+  /* Card Tilt Effect */
+  .card-tilt {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+  }
+
+  .card-tilt:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+  }
+
+  /* Fade Up Stagger */
+  .fade-up-stagger {
+    animation: fadeUpStagger 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeUpStagger {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
   }

@@ -79,3 +79,7 @@ GRANT EXECUTE ON FUNCTION public.update_user_approval_status(UUID, TEXT) TO auth
 --
 -- ========================================
 
+
+
+
+

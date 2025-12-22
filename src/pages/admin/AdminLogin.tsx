@@ -223,7 +223,7 @@ const AdminLogin = () => {
 
         {/* Footer */}
         <p className="text-center text-slate-500 text-sm mt-6">
-          BRICS Trade Admin Portal
+          BRICSZ Admin Portal
         </p>
       </div>
     </div>
