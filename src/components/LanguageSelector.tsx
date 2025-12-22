@@ -36,6 +36,7 @@ export const LanguageSelector = () => {
           className="gap-2 hover:bg-gold/10 hover:text-gold transition-all duration-300"
         >
           <Globe className="w-4 h-4" />
+          <span className="sm:hidden text-sm font-medium">Language</span>
           <span className="hidden sm:inline">{currentLanguage.flag}</span>
           <span className="hidden md:inline text-sm font-medium">
             {currentLanguage.name}
